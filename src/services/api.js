@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://127.0.0.1:4000/api/v1/users/user"; // Backend endpoint
+const API_URL = "https://dyspose-app.onrender.com/api/v1/users/user"; // Backend endpoint
 
 // Fetch user data by userId
 export const fetchUserData = async (userId) => {
