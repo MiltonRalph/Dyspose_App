@@ -22,6 +22,8 @@ const Register = () => {
   const [error, setError] = useState('');
   const navigate = useNavigate();
 
+  const backendUrl = "https://dyspose-app.onrender.com"
+
   // Handle form input changes
   const handleUsernameChange = (e) => setUsername(e.target.value);
   const handleEmailChange = (e) => {
@@ -65,7 +67,7 @@ const Register = () => {
 
       try {
         const response = await fetch(
-          'http://127.0.0.1:4000/api/v1/users/register',
+          `${backendUrl}/api/v1/users/register`,
           {
             method: 'POST',
             crossDomain: true,

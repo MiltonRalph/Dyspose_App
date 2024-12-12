@@ -8,6 +8,8 @@ const ProfilePage = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
+  const backendUrl = "https://dyspose-app.onrender.com"
+
   const userId = JSON.parse(window.sessionStorage.getItem('userId'));
   const token = JSON.parse(window.sessionStorage.getItem('token'));
 
@@ -21,7 +23,7 @@ const ProfilePage = () => {
     const fetchUserData = async () => {
       try {
         const response = await axios.get(
-          `http://127.0.0.1:4000/api/v1/users/user/${userId}`,
+          `${backendUrl}/api/v1/users/user/${userId}`,
           {
             headers: { Authorization: `Bearer ${token}` },
           }
@@ -46,7 +48,7 @@ const ProfilePage = () => {
 
     try {
       const response = await axios.put(
-        `http://127.0.0.1:4000/api/v1/users/user/${userId}`,
+        `${backendUrl}/api/v1/users/user/${userId}`,
         formData,
         {
           headers: {

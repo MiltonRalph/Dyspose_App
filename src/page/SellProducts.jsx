@@ -12,6 +12,8 @@ const SellProducts = () => {
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState('');
 
+  const backendUrl = "https://dyspose-app.onrender.com"
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!agreeToTerms) {
@@ -28,7 +30,7 @@ const SellProducts = () => {
     try {
       setLoading(true);
       const token = JSON.parse(window.sessionStorage.getItem('token')); // Assuming token is stored in session storage
-      await axios.post('http://127.0.0.1:4000/api/v1/products', formData, {
+      await axios.post(`${backendUrl}/api/v1/products`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
           Authorization: `Bearer ${token}`,

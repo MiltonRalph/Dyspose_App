@@ -16,6 +16,8 @@ const Login = () => {
   const [error, setError] = useState('');
   const navigate = useNavigate(); // Initialize navigate
 
+  const backendUrl = "https://dyspose-app.onrender.com"
+
   // Handle email input change
   const handleEmailChange = (e) => {
     const emailValue = e.target.value;
@@ -41,7 +43,7 @@ const Login = () => {
       // Backend registration logic using the models provided
       try {
         const response = await fetch(
-          'http://127.0.0.1:4000/api/v1/users/login',
+          `${backendUrl}/api/v1/users/login`,
           {
             method: 'POST',
             headers: {

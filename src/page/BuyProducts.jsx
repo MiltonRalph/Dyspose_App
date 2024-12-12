@@ -9,11 +9,13 @@ const BuyProducts = () => {
   const [cart, setCart] = useState([]);
   const [totalPrice, setTotalPrice] = useState(0); // State for total price
 
+  const backendUrl = "https://dyspose-app.onrender.com"
+
   useEffect(() => {
     const fetchProducts = async () => {
       try {
         const response = await axios.get(
-          'http://127.0.0.1:4000/api/v1/products'
+          `${backendUrl}/api/v1/products`
         );
         setProducts(response.data.products);
         setLoading(false);

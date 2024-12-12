@@ -23,6 +23,8 @@ const DashboardPage = () => {
   const [formLoading, setFormLoading] = useState(false);
   const form = useRef(null);
 
+  const backendUrl = "https://dyspose-app.onrender.com"
+
   const userId = JSON.parse(window.sessionStorage.getItem('userId'));
   const token = JSON.parse(window.sessionStorage.getItem('token'));
 
@@ -36,7 +38,7 @@ const DashboardPage = () => {
     const fetchUserData = async () => {
       try {
         const response = await axios.get(
-          `http://127.0.0.1:4000/api/v1/users/user/${userId}`,
+          `${backendUrl}/api/v1/users/user/${userId}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
