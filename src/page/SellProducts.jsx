@@ -4,6 +4,8 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const SellProducts = () => {
+  const backendUrl = "https://dyspose-app.onrender.com"
+  
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [price, setPrice] = useState('');
@@ -12,7 +14,6 @@ const SellProducts = () => {
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState('');
 
-  const backendUrl = "https://dyspose-app.onrender.com"
 
   const handleSubmit = async (e) => {
     e.preventDefault();

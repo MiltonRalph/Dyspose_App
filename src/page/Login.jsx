@@ -8,6 +8,8 @@ import 'react-toastify/dist/ReactToastify.css';
 import { FaEnvelope, FaEye, FaEyeSlash } from 'react-icons/fa';
 
 const Login = () => {
+  const backendUrl = "https://dyspose-app.onrender.com"
+  
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [isEmailValid, setIsEmailValid] = useState(false);
@@ -16,7 +18,6 @@ const Login = () => {
   const [error, setError] = useState('');
   const navigate = useNavigate(); // Initialize navigate
 
-  const backendUrl = "https://dyspose-app.onrender.com"
 
   // Handle email input change
   const handleEmailChange = (e) => {

@@ -4,11 +4,12 @@ import { BiCloud, BiRecycle, BiEdit } from 'react-icons/bi';
 import Loader from '../components/Loader';
 
 const ProfilePage = () => {
+  const backendUrl = "https://dyspose-app.onrender.com"
+  
   const [userData, setUserData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  const backendUrl = "https://dyspose-app.onrender.com"
 
   const userId = JSON.parse(window.sessionStorage.getItem('userId'));
   const token = JSON.parse(window.sessionStorage.getItem('token'));

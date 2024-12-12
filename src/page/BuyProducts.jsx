@@ -3,13 +3,14 @@ import axios from 'axios';
 import Loader from '../components/Loader';
 
 const BuyProducts = () => {
+  const backendUrl = "https://dyspose-app.onrender.com"
+  
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
   const [cart, setCart] = useState([]);
   const [totalPrice, setTotalPrice] = useState(0); // State for total price
 
-  const backendUrl = "https://dyspose-app.onrender.com"
 
   useEffect(() => {
     const fetchProducts = async () => {

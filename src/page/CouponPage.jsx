@@ -3,10 +3,11 @@ import { FaTag } from 'react-icons/fa'; // Tag icon for coupon image
 import Loader from '../components/Loader';
 
 const CouponPage = () => {
+  const backendUrl = "https://dyspose-app.onrender.com"
+  
   const [user, setUserData] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  const backendUrl = "https://dyspose-app.onrender.com"
 
   const userId = JSON.parse(window.sessionStorage.getItem('userId'));
   const token = JSON.parse(window.sessionStorage.getItem('token'));
@@ -14,8 +15,7 @@ const CouponPage = () => {
   const getUserData = async () => {
     try {
       const response = await fetch(
-        `${backendUrl}/api/v1/users/user/${userId}`
-
+        `${backendUrl}/api/v1/users/user/${userId}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,

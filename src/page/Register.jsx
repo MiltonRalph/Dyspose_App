@@ -8,6 +8,8 @@ import { FaEnvelope, FaEye, FaEyeSlash } from 'react-icons/fa';
 import { statesAndCities } from '../utils/statesAndCities';
 
 const Register = () => {
+  const backendUrl = "https://dyspose-app.onrender.com"
+  
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [showPassword, setShowPassword] = useState(false);
@@ -22,7 +24,6 @@ const Register = () => {
   const [error, setError] = useState('');
   const navigate = useNavigate();
 
-  const backendUrl = "https://dyspose-app.onrender.com"
 
   // Handle form input changes
   const handleUsernameChange = (e) => setUsername(e.target.value);
