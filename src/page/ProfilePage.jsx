@@ -4,12 +4,11 @@ import { BiCloud, BiRecycle, BiEdit } from 'react-icons/bi';
 import Loader from '../components/Loader';
 
 const ProfilePage = () => {
-  const backendUrl = "https://dyspose-app.onrender.com"
-  
+  const backendUrl = 'https://dyspose-app.onrender.com';
+
   const [userData, setUserData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-
 
   const userId = JSON.parse(window.sessionStorage.getItem('userId'));
   const token = JSON.parse(window.sessionStorage.getItem('token'));
@@ -70,7 +69,7 @@ const ProfilePage = () => {
     return <div className='text-red-500 text-center mt-4'>{error}</div>;
 
   return (
-    <div className='flex flex-col items-center min-h-screen bg-gray-100 p-6'>
+    <div className='flex flex-col items-center p-4 bg-gray-50 min-h-screen md:p-8 lg:mb-0'>
       <div className='bg-white shadow-lg rounded-lg p-6 w-full max-w-md'>
         <div className='relative flex items-center justify-center'>
           <img
@@ -132,16 +131,15 @@ const ProfilePage = () => {
             </button>
           </div>
         </div>
+        <button
+          className='mt-6 px-6 py-2 bg-red-500 text-white font-semibold rounded-lg shadow-md hover:bg-red-600 transition'
+          onClick={() => {
+            window.sessionStorage.clear();
+            window.location.reload();
+          }}>
+          Logout
+        </button>
       </div>
-
-      <button
-        className='mt-6 px-6 py-2 bg-red-500 text-white font-semibold rounded-lg shadow-md hover:bg-red-600 transition'
-        onClick={() => {
-          window.sessionStorage.clear();
-          window.location.reload();
-        }}>
-        Logout
-      </button>
     </div>
   );
 };

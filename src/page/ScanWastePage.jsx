@@ -58,7 +58,7 @@ const ScanWastePage = () => {
   };
 
   return (
-    <div className='flex flex-col items-center justify-center min-h-screen bg-gray-100'>
+    <div className='flex flex-col items-center justify-center p-4 bg-gray-50 min-h-screen md:p-8 lg:mb-0'>
       {/* Camera Feed */}
       <div className='flex justify-center w-full'>
         <video

@@ -50,7 +50,7 @@ const BuyProducts = () => {
     );
 
   return (
-    <div className='container mx-auto px-4 py-6'>
+    <div className='container mx-auto px-4 py-6 bg-gray-50 min-h-screen md:p-8 lg:mb-0'>
       <h1 className='text-2xl font-bold text-center mb-8 text-green-700'>
         Shop Wastes
       </h1>

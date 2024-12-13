@@ -116,8 +116,7 @@ const Register = () => {
   return (
     <>
       <div className='flex justify-center items-center h-screen bg-gray-100'>
-        {/* <TypingEffect /> */}
-        <div className='bg-white mt-6 mx-3 p-6 rounded-lg shadow-lg w-96'>
+        <div className='bg-white p-6 mx-3 rounded-lg shadow-lg w-96'>
           <h2 className='text-2xl font-semibold mb-4 text-primaryColor'>
             Register
           </h2>

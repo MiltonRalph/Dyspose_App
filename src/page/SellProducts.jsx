@@ -59,7 +59,7 @@ const SellProducts = () => {
   };
 
   return (
-    <div className='container mx-auto px-4 py-6'>
+    <div className='container mx-auto px-4 py-6 bg-gray-50 min-h-screen md:p-8 lg:mb-0'>
       <form
         onSubmit={handleSubmit}
         className='max-w-lg mx-auto bg-white shadow-lg p-6 rounded-lg'>

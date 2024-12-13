@@ -123,7 +123,7 @@ const DashboardPage = () => {
     return <div className='text-red-500 text-center mt-4'>{error}</div>;
 
   return (
-    <section className='flex flex-col gap-6 p-4 mb-28 bg-gray-50 min-h-screen md:p-8 lg:mb-0'>
+    <section className='flex flex-col gap-6 p-4 bg-gray-50 min-h-screen md:p-8 lg:mb-0'>
       <div className='flex items-center justify-between bg-white shadow-md p-4 rounded-lg'>
         <div className='flex items-center gap-4'>
           <img
@@ -160,31 +160,31 @@ const DashboardPage = () => {
       <div className='bg-green-600 text-white p-6 rounded-lg shadow-md'>
         <div className='grid grid-cols-3 gap-6'>
           <div className='flex flex-col items-center'>
-            <div className='p-3 bg-white text-green-600 rounded-full'>
-              <BiMap size={36} />
+            <div className='p-2 bg-white text-green-600 rounded-full md:p-3'>
+              <BiMap size={32} />
             </div>
             <p className='mt-2 text-lg font-bold'>
               {user.totalPointsEarned || 0}
             </p>
-            <p className='text-sm'>Points Earned</p>
+            <p className='test-xs md:text-sm'>Points Earned</p>
           </div>
 
           <div className='flex flex-col items-center'>
-            <div className='p-3 bg-white text-green-600 rounded-full'>
-              <BiCloud size={36} />
+            <div className='p-2 bg-white text-green-600 rounded-full md:p-3'>
+              <BiCloud size={32} />
             </div>
             <p className='mt-2 text-lg font-bold'>0 CO2</p>
-            <p className='text-sm'>CO2 Saved</p>
+            <p className='test-xs md:text-sm'>CO2 Saved</p>
           </div>
 
           <div className='flex flex-col items-center'>
-            <div className='p-3 bg-white text-green-600 rounded-full'>
-              <BiRecycle size={36} />
+            <div className='p-2 bg-white text-green-600 rounded-full md:p-3'>
+              <BiRecycle size={32} />
             </div>
             <p className='mt-2 text-lg font-bold'>
               {user?.wasteDumped?.length || 0}
             </p>
-            <p className='text-sm'>Recycled</p>
+            <p className='test-xs md:text-sm'>Recycled</p>
           </div>
         </div>
       </div>

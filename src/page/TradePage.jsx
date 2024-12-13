@@ -4,7 +4,7 @@ import { BiCart, BiStore } from "react-icons/bi";
 
 const TradePage = () => {
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col justify-center items-center">
+    <div className="flex flex-col justify-center items-center p-4 bg-gray-50 min-h-screen md:p-8 lg:mb-0">
       {/* Header Section */}
       <div className="text-center mb-8 m-1">
         <h1 className="text-4xl font-bold text-green-700 mb-4">Trade Waste</h1>
