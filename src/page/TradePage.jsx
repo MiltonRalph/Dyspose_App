@@ -7,7 +7,7 @@ const TradePage = () => {
     <div className="flex flex-col justify-center items-center p-4 bg-gray-50 min-h-screen md:p-8 lg:mb-0">
       {/* Header Section */}
       <div className="text-center mb-8 m-1">
-        <h1 className="text-4xl font-bold text-green-700 mb-4">Trade Waste</h1>
+        <h1 className="text-2xl font-bold text-green-700 mb-4">Trade Waste</h1>
         <p className="text-gray-600 text-lg">
           Choose whether you want to <span className="font-semibold text-green-700">Buy</span> or <span className="font-semibold text-green-700">Sell</span> waste.
         </p>

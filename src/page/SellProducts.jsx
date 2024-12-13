@@ -59,7 +59,7 @@ const SellProducts = () => {
   };
 
   return (
-    <div className='container mx-auto px-4 py-6 bg-gray-50 min-h-screen md:p-8 lg:mb-0'>
+    <div className='container px-4 py-6 bg-gray-50 min-h-screen md:p-8 lg:mb-0'>
       <form
         onSubmit={handleSubmit}
         className='max-w-lg mx-auto bg-white shadow-lg p-6 rounded-lg'>
@@ -111,7 +111,7 @@ const SellProducts = () => {
               onChange={(e) => setAgreeToTerms(e.target.checked)}
             />
             I agree to the{' '}
-            <span className='text-blue-600 ml-1 font-semibold text-xs md:text-md'>Terms and Conditions</span>
+            <span className='text-blue-600 ml-2 font-semibold text-xs md:text-md'>Terms and Conditions</span>
           </label>
           {agreeToTerms && (
             <p className='text-sm mt-2'>

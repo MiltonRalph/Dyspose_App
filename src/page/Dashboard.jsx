@@ -202,10 +202,10 @@ const DashboardPage = () => {
               <img
                 src={waste.img}
                 alt={waste[index]}
-                className='h-40 w-full object-cover'
+                className='h-56 w-full object-cover'
               />
               <div className='p-4'>
-                <h3 className='font-bold text-lg text-gray-700'>
+                <h3 className='font-bold text-md text-gray-700 md:text-lg'>
                   {waste.title}
                 </h3>
                 <p className='text-sm text-gray-600'>{waste.description}</p>
