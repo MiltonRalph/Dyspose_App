@@ -103,7 +103,7 @@ const SellProducts = () => {
           />
         </div>
         <div className='mb-4'>
-          <label className='flex items-center'>
+          <label className='flex items-center text-xs md:text-md'>
             <input
               type='checkbox'
               className='mr-2'
@@ -111,7 +111,7 @@ const SellProducts = () => {
               onChange={(e) => setAgreeToTerms(e.target.checked)}
             />
             I agree to the{' '}
-            <span className='text-blue-600 ml-1'>Terms and Conditions</span>
+            <span className='text-blue-600 ml-1 font-semibold text-xs md:text-md'>Terms and Conditions</span>
           </label>
           {agreeToTerms && (
             <p className='text-sm mt-2'>

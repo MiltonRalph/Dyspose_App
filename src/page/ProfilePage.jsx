@@ -69,7 +69,7 @@ const ProfilePage = () => {
     return <div className='text-red-500 text-center mt-4'>{error}</div>;
 
   return (
-    <div className='flex flex-col items-center p-4 bg-gray-50 min-h-screen md:p-8 lg:mb-0'>
+    <div className='flex flex-col items-center p-4 mb-12 bg-gray-50 min-h-screen md:p-8 lg:mb-0'>
       <div className='bg-white shadow-lg rounded-lg p-6 w-full max-w-md'>
         <div className='relative flex items-center justify-center'>
           <img
@@ -131,15 +131,15 @@ const ProfilePage = () => {
             </button>
           </div>
         </div>
+      </div>
         <button
-          className='mt-6 px-6 py-2 bg-red-500 text-white font-semibold rounded-lg shadow-md hover:bg-red-600 transition'
+          className='m-6 px-6 py-2 bg-red-500 text-white font-semibold rounded-lg shadow-md hover:bg-red-600 transition'
           onClick={() => {
             window.sessionStorage.clear();
             window.location.reload();
           }}>
           Logout
         </button>
-      </div>
     </div>
   );
 };
